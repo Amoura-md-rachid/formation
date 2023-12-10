@@ -6,13 +6,24 @@ import java.util.Objects;
 public class Personne {
 
     private String nom;
+
+    private String prenom;
     private int age;
 
-    public Personne(String nom, int age) {
+
+    public Personne(String nom, String prenom, int age) {
         this.nom = nom;
+        this.prenom = prenom;
         this.age = age;
     }
 
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
 
     public String getNom() {
         return nom;
@@ -34,6 +45,7 @@ public class Personne {
     public String toString() {
         return "Personne{" +
                 "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
                 ", age=" + age +
                 '}';
     }
